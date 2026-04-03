@@ -1,6 +1,8 @@
 # 🎮 2048 Game (JavaScript + Mobile Support)
 
-A clean and responsive implementation of the classic **2048 game** built using **HTML, CSS, and JavaScript** — now with **mobile swipe support** 📱.
+Play the game live 👉 **https://eswar-89.github.io/2048/**
+
+A clean and responsive implementation of the classic **2048 game** built using **HTML, CSS, and JavaScript** — with full **mobile swipe support** 📱.
 
 ---
 
@@ -12,8 +14,15 @@ A clean and responsive implementation of the classic **2048 game** built using *
 * 🔢 Real-time score tracking
 * 🎨 Dynamic tile colors
 * ❌ Game Over detection
-* 🔄 Retry button to restart instantly
-* 📱 Responsive design for different screen sizes
+* 🔄 Retry button
+* 📱 Fully responsive design
+
+---
+
+## 🎮 Live Demo
+
+👉 **Play here:**
+https://eswar-89.github.io/2048/
 
 ---
 
@@ -21,7 +30,7 @@ A clean and responsive implementation of the classic **2048 game** built using *
 
 * **HTML** – Structure
 * **CSS** – Styling and responsiveness
-* **JavaScript** – Game logic and touch handling
+* **JavaScript** – Game logic + touch handling
 
 ---
 
@@ -29,7 +38,7 @@ A clean and responsive implementation of the classic **2048 game** built using *
 
 ### 💻 Desktop
 
-* Use the **arrow keys**:
+* Use **Arrow Keys**:
 
   * ⬅️ Left
   * ➡️ Right
@@ -38,10 +47,10 @@ A clean and responsive implementation of the classic **2048 game** built using *
 
 ### 📱 Mobile
 
-* Swipe on the screen:
+* Swipe on the board:
 
-  * 👉 Swipe Left
-  * 👈 Swipe Right
+  * 👉 Swipe Right
+  * 👈 Swipe Left
   * 👆 Swipe Up
   * 👇 Swipe Down
 
@@ -49,13 +58,13 @@ A clean and responsive implementation of the classic **2048 game** built using *
 
 ## 🧠 Game Rules
 
-* When two tiles with the same number collide, they **merge into one**
-* Each move spawns a new tile (**2**) at a random position
-* The goal is to reach **2048**
-* The game ends when:
+* Merge tiles with the same number to create bigger numbers
+* Each move spawns a new tile (**2**)
+* Reach **2048** to win 🏆
+* Game ends when:
 
-  * No empty cells remain
-  * No valid moves are possible
+  * No empty cells
+  * No possible merges
 
 ---
 
@@ -70,36 +79,40 @@ A clean and responsive implementation of the classic **2048 game** built using *
 
 ---
 
-## ▶️ How to Run
+## ▶️ Run Locally
 
-1. Clone or download this repository
-2. Open `index.html` in any browser
-3. Start playing 🎉
+1. Clone the repo:
 
----
+```
+git clone https://github.com/eswar-89/2048.git
+```
 
-## 🔄 Restarting the Game
-
-* When no moves are left, a **Game Over screen** appears
-* Click or tap the **Retry button** to start a new game
+2. Open `index.html` in your browser
 
 ---
 
-## 📱 Mobile Support Details
+## 🔄 Restarting
 
-* Swipe gestures are implemented using **touch events**
-* Smooth gameplay on smartphones and tablets
-* Page scrolling is disabled during gameplay for better control
+* Game Over screen appears when no moves are left
+* Click **Retry** to start again
+
+---
+
+## 📱 Mobile Optimization
+
+* Touch swipe support added
+* Scroll disabled during gameplay
+* Responsive board sizing
 
 ---
 
 ## 🙌 Acknowledgements
 
-Inspired by the original **2048 game by Gabriele Cirulli**
+Inspired by the original **2048 by Gabriele Cirulli**
 
 ---
 
-## 📌 Author
+## 👤 Author
 
 **Boosetty Eswara Varaprasad**
 
