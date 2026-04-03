@@ -2,9 +2,23 @@ var board;
 var score = 0;
 var rows = 4;
 var cols = 4;
+let touchStartX = 0;
+let touchStartY = 0;
+let touchEndX = 0;
+let touchEndY = 0;
 
 window.onload = function () {
   setGame();
+  document.addEventListener("touchstart", (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  });
+
+  document.addEventListener("touchend", (e) => {
+    touchEndX = e.changedTouches[0].clientX;
+    touchEndY = e.changedTouches[0].clientY;
+    handleSwipe();
+  });
 };
 
 function setGame() {
@@ -234,4 +248,35 @@ function restartGame() {
   score = 0;
   document.getElementById("score").innerText = score;
   setGame();
+}
+
+function handleSwipe() {
+  let dx = touchEndX - touchStartX;
+  let dy = touchEndY - touchStartY;
+
+  // Minimum swipe distance (avoid small accidental touches)
+  let threshold = 30;
+
+  if (Math.abs(dx) > Math.abs(dy)) {
+    // horizontal swipe
+    if (dx > threshold) {
+      slideRight();
+    } else if (dx < -threshold) {
+      slideLeft();
+    }
+  } else {
+    // vertical swipe
+    if (dy > threshold) {
+      slideDown();
+    } else if (dy < -threshold) {
+      slideUp();
+    }
+  }
+
+  setTwo();
+  document.getElementById("score").innerText = score;
+
+  if (isGameOver()) {
+    showGameOver();
+  }
 }
